@@ -1,0 +1,60 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+input {
+  margin: .4rem;
+}
+/* 
+body {
+  height: 100vh;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 90%;
+}
+
+.controls {
+  margin: 50px;
+}
+
+.canvas {
+  margin: 50px;
+  border: 2px solid rgba(128, 128, 128, 0.621);
+  display: grid;
+  /* grid-gap: 1em; */
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+
+/* 
+#container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+} */
+
+.grid-item {
+  /* padding: 1em; */
+  border: 1px solid #ddd;
+  text-align: center;
+}
