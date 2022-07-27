@@ -1,7 +1,7 @@
 :root {
   --grid-cols: 5;
   --grid-rows: 5;
-  --color: black
+  --color: "#FFFF"
 }
 
 input {
