@@ -1,6 +1,7 @@
 :root {
   --grid-cols: 5;
   --grid-rows: 5;
+  --color: black
 }
 
 input {
@@ -46,5 +47,5 @@ input {
 }
 
 .grid-item-color {
-  background-color: black;
+  background-color: var(--color);
 }
