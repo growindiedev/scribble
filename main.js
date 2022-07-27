@@ -1,10 +1,18 @@
 let container = document.querySelector(".canvas");
 let val = document.querySelector("#size");
+let colorModeValue = "black";
 // let gridBoxes;
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
+
+let btns = document.querySelectorAll("button").forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    colorModeValue = e.target.value;
+    alert(colorModeValue);
+  })
+);
 
 function makeGrids(rows, cols) {
   container.innerHTML = "";
@@ -17,18 +25,29 @@ function makeGrids(rows, cols) {
     cell.addEventListener("mousedown", changeColor);
     container.appendChild(cell).classList.add("grid-item");
   }
-  // gridBoxes = document.querySelectorAll(".grid-item");
-  // gridBoxes.forEach((element) => {
-  //   element.onmousemove = (e) => e.target.classList.add("grid-item-color");
-  // });
 }
 
 function changeColor(e) {
-  let color = document.querySelector("#color-input").value;
   if (e.type === "mouseover" && !mouseDown) return;
+  let color = document.querySelector("#color-input").value;
   e.target.classList.add("grid-item-color");
-  e.target.style.setProperty("--color", color);
+
+  if (colorModeValue === "color") {
+    e.target.style.setProperty("--color", color);
+    return;
+  } else if (colorModeValue === "rainbow") {
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    e.target.style.setProperty("--color", `#${randomColor}`);
+    return;
+  } else if (colorModeValue === "eraser") {
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    e.target.style.setProperty("--color", "#ffff");
+    return;
+  }
+  e.target.style.setProperty("--color", "black");
 }
+
+// e.target.style.setProperty("--color", "black");
 
 makeGrids(100, 100);
 
