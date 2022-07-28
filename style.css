@@ -12,22 +12,26 @@ input {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid green; */
   font-family: 'Roboto', sans-serif;
-  border: 1px solid green;
+  /* border: 1px solid green; */
+}
+
+input, label {
+  display: block;
+  text-align: center;
 }
 
 .header {
   text-align: center;
   font-weight: bold;
   font-size: 2em;
-  padding: 10px;
+  margin: 30px 0;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 90%;
+  height: 80%;
 }
 
 .controls {
@@ -46,7 +50,25 @@ button {
   display: block;
   padding: 10px 20px;
   width: 150px;
-  margin: 10px;
+  margin: 30px 0;
+  border-radius: 5px;
+  background-color: #774360;
+  color: white;
+}
+
+.btn-group {
+  padding: 0 30px;
+}
+
+#selected {
+  background-color: darkslategrey;
+  color: white;
+}
+
+.status {
+  text-align: center;
+  margin: 20px;
+  font-size: larger;
 }
 
 #color-input {
@@ -54,8 +76,8 @@ button {
   padding: 0;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 #color-input::-webkit-color-swatch {
   border: none;

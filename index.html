@@ -33,17 +33,18 @@
             <label for="eraser">Eraser</label>
           </div>
       </fieldset> -->
-      <div class="btn-group">
-      <button class="color-mode-btn btn ctrl-item" value="color">Color Mode</button>
-      <button class="rainbow-mode-btn btn ctrl-item" value="rainbow">Rainbow Mode</button>
-      <button class="eraser-btn btn ctrl-item" value="eraser">Eraser</button>
+    <div class="btn-group">
+      <div class="status"></div>
+      <button class="color-mode-btn btn ctrl-item" value="Color">Color Mode</button>
+      <button class="rainbow-mode-btn btn ctrl-item" value="Rainbow">Rainbow Mode</button>
+      <button class="eraser-btn btn ctrl-item" value="Eraser">Eraser</button>
       <button class="reset-btn ctrl-item" value="reset">Reset</button>
     </div>
-      <div class="ctrl-item">
-        <input type="range" id="size" name="size"
+    <div class="ctrl-item">
+      <label for="size" class="size-label"></label>
+      <input type="range" id="size" name="size"
               min="10" max="100">
-        <label for="size">Size</label>
-      </div>
+    </div>
     </div>
     <div class="canvas"></div>
   </div>
