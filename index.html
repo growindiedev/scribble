@@ -14,35 +14,36 @@
   </div>
   <div class="container">
     <div class="controls">
-      <input type="color" id="color-input">
-      <!-- <fieldset>
-        <legend>Select the mode</legend>
-        <div>
-          <input type="radio" id="color-mode" name="drone" value="color-mode"
-                 checked>
-          <label for="color-mode">Color Mode</label>
-        </div>
-    
-        <div>
-          <input type="radio" id="rainbow-mode" name="drone" value="rainbow-mode">
-          <label for="rainbow-mode">Rainbow Mode</label>
-        </div>
-    
-        <div>
-          <input type="radio" id="eraser" name="drone" value="eraser">
-          <label for="eraser">Eraser</label>
-        </div>
-    </fieldset> -->
-    <button class="color-mode-btn btn" value="color">Color Mode</button>
-    <button class="rainbow-mode-btn btn" value="rainbow">Rainbow Mode</button>
-    <button class="eraser-btn btn" value="eraser">Eraser</button>
-    <button class="reset-btn" value="reset">Reset</button>
-
-    <div>
-      <input type="range" id="size" name="size"
-             min="10" max="100">
-      <label for="size">Size</label>
+      <input type="color" id="color-input" class="ctrl-item">
+        <!-- <fieldset>
+          <legend>Select the mode</legend>
+          <div>
+            <input type="radio" id="color-mode" name="drone" value="color-mode"
+                  checked>
+            <label for="color-mode">Color Mode</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="rainbow-mode" name="drone" value="rainbow-mode">
+            <label for="rainbow-mode">Rainbow Mode</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="eraser" name="drone" value="eraser">
+            <label for="eraser">Eraser</label>
+          </div>
+      </fieldset> -->
+      <div class="btn-group">
+      <button class="color-mode-btn btn ctrl-item" value="color">Color Mode</button>
+      <button class="rainbow-mode-btn btn ctrl-item" value="rainbow">Rainbow Mode</button>
+      <button class="eraser-btn btn ctrl-item" value="eraser">Eraser</button>
+      <button class="reset-btn ctrl-item" value="reset">Reset</button>
     </div>
+      <div class="ctrl-item">
+        <input type="range" id="size" name="size"
+              min="10" max="100">
+        <label for="size">Size</label>
+      </div>
     </div>
     <div class="canvas"></div>
   </div>
