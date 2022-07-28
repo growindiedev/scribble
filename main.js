@@ -23,15 +23,6 @@ document.querySelector(".reset-btn").addEventListener("click", () => {
   document.querySelectorAll(".grid-item").forEach((grid) => (grid.style = ""));
 });
 
-// if (colorModeValue) {
-//   document.querySelectorAll(".btn").forEach((btn) => {
-//     btn.addEventListener("click", (e) => {
-//       if (colorModeValue !== e.target.value)
-//         e.target.classList.remove("selected");
-//     });
-//   });
-// }
-
 function makeGrids(rows, cols) {
   container.innerHTML = "";
   container.style.setProperty("--grid-rows", rows);
